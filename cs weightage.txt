@@ -1,0 +1,27 @@
+weightage in cs
+
+gemini
+dbms										12-25
+computer network							10-13
+OS											10-12
+DSA											8-10
+programming(c,cpp,java,python)				12-15
+digital electronics							8-10
+software engineering 						5-7
+web technology and emering trends 			5-8
+teaching methodology						10-15
+
+
+gpt
+dsa													8-12
+dbms and sql										10-15
+computer network									8-12
+operating system									8-10
+programming in c 									10-15
+oops concepts(cpp/java)								5-8
+software engineering								4-6
+web technolgy(html,http,web hosting)				4-6
+computer fundamental								5-8
+digital electronics and number system				4-6
+teaching aptitude/pedagogy							10-15
+recent computer development & miscellaneous			2-5																			

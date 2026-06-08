@@ -1,0 +1,1275 @@
+## Types of Operating Systems
+
+### Q1.
+
+An operating system that executes jobs in groups without user interaction is called:
+
+* A) Time-sharing OS
+* B) Real-time OS
+* C) Batch OS
+* D) Distributed OS
+
+**Answer:** C
+
+---
+
+### Q2.
+
+Which OS allows many users to share CPU time simultaneously?
+
+* A) Batch OS
+* B) Time-sharing OS
+* C) Multiprocessor OS
+* D) Real-time OS
+
+**Answer:** B
+
+---
+
+### Q3.
+
+In a real-time operating system:
+
+* A) Throughput is maximum
+* B) Response time is critical
+* C) Cost is minimum
+* D) Memory is unlimited
+
+**Answer:** B
+
+---
+
+### Q4.
+
+Multiprogramming aims to:
+
+* A) Increase CPU utilization
+* B) Reduce memory
+* C) Increase I/O devices
+* D) Remove scheduling
+
+**Answer:** A
+
+---
+
+### Q5.
+
+Which OS is generally used in air traffic control systems?
+
+* A) Batch OS
+* B) Time-sharing OS
+* C) Real-time OS
+* D) Multiprogramming OS
+
+**Answer:** C
+
+---
+
+### Q6.
+
+A hard real-time system must:
+
+* A) Meet deadlines strictly
+* B) Ignore deadlines
+* C) Increase throughput only
+* D) Reduce memory
+
+**Answer:** A
+
+---
+
+### Q7.
+
+Which is NOT a characteristic of batch processing?
+
+* A) No interaction
+* B) Similar jobs grouped
+* C) Immediate response
+* D) Automatic execution
+
+**Answer:** C
+
+---
+
+### Q8.
+
+In multiprogramming:
+
+* A) Only one process resides in memory
+* B) Multiple jobs reside in memory
+* C) CPU remains idle
+* D) Scheduling is absent
+
+**Answer:** B
+
+---
+
+### Q9.
+
+Multiprocessor systems contain:
+
+* A) One CPU
+* B) Two or more CPUs
+* C) One process
+* D) One memory block only
+
+**Answer:** B
+
+---
+
+### Q10.
+
+Which OS provides fastest response to external events?
+
+* A) Batch
+* B) Multiprogramming
+* C) Real-time
+* D) Network
+
+**Answer:** C
+
+---
+
+# Process Management
+
+### Q11.
+
+A program in execution is called:
+
+* A) Thread
+* B) Process
+* C) Job => entire package submitted by user to system.
+* D) Module
+
+**Answer:** B
+
+---
+
+### Q12.
+
+The first state of a process is:
+
+* A) Running
+* B) Ready
+* C) New
+* D) Waiting
+
+**Answer:** C
+
+---
+
+### Q13.
+
+A process waiting for I/O is in:
+
+* A) Running
+* B) Blocked
+* C) Ready
+* D) Exit
+
+**Answer:** B
+
+---
+
+### Q14.
+
+PCB stands for:
+
+* A) Process Control Block
+* B) Program Control Block
+* C) Process Command Block
+* D) Processor Control Base
+
+**Answer:** A
+
+---
+
+### Q15.
+
+PCB stores:
+
+* A) Process state
+* B) Program counter
+* C) CPU registers
+* D) All of these
+
+**Answer:** D
+
+---
+
+### Q16.
+
+Smallest unit of CPU execution is:
+
+* A) Process
+* B) Thread
+* C) Job
+* D) Program
+
+**Answer:** B
+
+---
+
+### Q17.
+
+A thread is:
+
+* A) Heavyweight process
+* B) Lightweight process
+* C) Dead process
+* D) Batch process
+
+**Answer:** B
+
+---
+
+### Q18.
+
+FCFS scheduling is:
+
+* A) Preemptive
+* B) Non-preemptive
+* C) Real-time
+* D) Priority-based
+
+**Answer:** B
+
+---
+
+### Q19.
+
+FCFS suffers from:
+
+* A) Starvation
+* B) Deadlock
+* C) Convoy effect
+* D) Thrashing
+
+**Answer:** C
+
+---
+
+### Q20.
+
+Shortest Job First scheduling selects:
+
+* A) Highest priority process
+* B) Longest process
+* C) Smallest burst time
+* D) Earliest arrival
+
+**Answer:** C
+
+---
+
+### Q21.
+
+SJF gives:
+
+* A) Maximum waiting time
+* B) Minimum average waiting time
+* C) Deadlock
+* D) Starvation-free system
+
+**Answer:** B
+
+---
+
+### Q22.
+
+Round Robin uses:
+
+* A) Priority
+* B) Time quantum
+* C) Semaphore
+* D) Monitor
+
+**Answer:** B
+
+---
+
+### Q23.
+
+If time quantum is too small:
+
+* A) Context switching increases
+* B) CPU utilization becomes zero
+* C) Deadlock occurs
+* D) Memory decreases
+
+**Answer:** A
+
+---
+
+### Q24.
+
+Which scheduling is preemptive?
+
+* A) FCFS
+* B) Non-preemptive SJF
+* C) Round Robin
+* D) None
+
+**Answer:** C
+
+---
+
+### Q25.
+
+Starvation is common in:
+
+* A) FCFS
+* B) Round Robin
+* C) Priority Scheduling
+* D) FIFO
+
+**Answer:** C
+
+---
+
+# Process Synchronization
+
+### Q26.
+
+The critical section problem deals with:
+
+* A) CPU scheduling
+* B) Shared resources
+* C) Memory allocation
+* D) File allocation
+
+**Answer:** B
+
+---
+
+### Q27.
+
+Only one process should execute in critical section at a time. This property is:
+
+* A) Progress
+* B) Mutual Exclusion
+* C) Starvation
+* D) Aging
+
+**Answer:** B
+
+---
+
+### Q28.
+
+Semaphore was proposed by:
+
+* A) Peterson
+* B) Dijkstra
+* C) Banker
+* D) Lamport
+
+**Answer:** B
+
+---
+
+### Q29.
+
+Semaphore operations are:
+
+* A) Lock-Unlock
+* B) Open-Close
+* C) Wait-Signal
+* D) Start-End
+
+**Answer:** C
+
+---
+
+### Q30.
+
+A semaphore value can never become:
+
+* A) Positive
+* B) Negative
+* C) Zero
+* D) One
+
+**Answer:** False statement; semaphore may become negative. (Exam answer: B if asked "which can occur")
+
+---
+
+### Q31.
+
+Binary semaphore values are:
+
+* A) 0,1
+* B) 1,2
+* C) -1,0
+* D) Any integer
+
+**Answer:** A
+
+---
+
+### Q32.
+
+Monitor is:
+
+* A) Hardware device
+* B) High-level synchronization construct
+* C) Scheduling algorithm
+* D) Memory unit
+
+**Answer:** B
+
+---
+
+### Q33.
+
+IPC stands for:
+
+* A) Internal Process Communication
+* B) Inter Process Communication
+* C) Internet Process Control
+* D) Input Process Control
+
+**Answer:** B
+
+---
+
+### Q34.
+
+Which is an IPC mechanism?
+
+* A) Pipe
+* B) Message Queue
+* C) Shared Memory
+* D) All of these
+
+**Answer:** D
+
+---
+
+### Q35.
+
+Shared memory is generally:
+
+* A) Slowest IPC
+* B) Fastest IPC
+* C) Deadlock-free
+* D) None
+
+**Answer:** B
+
+---
+
+# Deadlocks
+
+### Q36.
+
+Deadlock occurs when:
+
+* A) Processes wait indefinitely
+* B) CPU idle
+* C) Memory full
+* D) Process terminates
+
+**Answer:** A
+
+---
+
+### Q37.
+
+Necessary condition for deadlock:
+
+* A) Mutual exclusion
+* B) Hold and wait
+* C) Circular wait
+* D) All of these
+
+**Answer:** D
+
+---
+
+### Q38.
+
+How many Coffman conditions exist?
+
+* A) 2
+* B) 3
+* C) 4
+* D) 5
+
+**Answer:** C
+
+---
+
+### Q39.
+
+Resource Allocation Graph is used for:
+
+* A) Scheduling
+* B) Deadlock analysis
+* C) Paging
+* D) Segmentation
+
+**Answer:** B
+
+---
+
+### Q40.
+
+A cycle in a single-instance RAG indicates:
+
+* A) Starvation
+* B) Deadlock
+* C) Thrashing
+* D) Scheduling
+
+**Answer:** B
+
+---
+
+### Q41.
+
+Banker's Algorithm is used for:
+
+* A) Detection
+* B) Prevention
+* C) Avoidance
+* D) Recovery
+
+**Answer:** C
+
+---
+
+### Q42.
+
+Banker's Algorithm was proposed by:
+
+* A) Dijkstra
+* B) Peterson
+* C) Coffman
+* D) Holt
+
+**Answer:** A
+
+---
+
+### Q43.
+
+Safe state means:
+
+* A) Deadlock exists
+* B) Deadlock impossible
+* C) System can avoid deadlock
+* D) CPU idle
+
+**Answer:** C
+
+---
+
+### Q44.
+
+Deadlock prevention works by:
+
+* A) Violating one Coffman condition
+* B) Increasing memory
+* C) Increasing CPU
+* D) Reducing files
+
+**Answer:** A
+
+---
+
+### Q45.
+
+Terminating processes is a method of:
+
+* A) Prevention
+* B) Detection
+* C) Recovery
+* D) Scheduling
+
+**Answer:** C
+
+---
+
+# Memory Management
+
+### Q46.
+
+Address generated by CPU:
+
+* A) Physical address
+* B) Logical address
+* C) Absolute address
+* D) Real address
+
+**Answer:** B
+
+---
+
+### Q47.
+
+Actual memory address is:
+
+* A) Virtual
+* B) Logical
+* C) Physical
+* D) Relative
+
+**Answer:** C
+
+---
+
+### Q48.
+
+Paging removes:
+
+* A) External fragmentation
+* B) Internal fragmentation
+* C) Deadlock
+* D) Starvation
+
+**Answer:** A
+
+---
+
+### Q49.
+
+Fixed-size memory blocks are:
+
+* A) Segments
+* B) Frames
+* C) Processes
+* D) Threads
+
+**Answer:** B
+
+---
+
+### Q50.
+
+Fixed-size logical blocks are:
+
+* A) Pages
+* B) Segments
+* C) Frames
+* D) Buffers
+
+**Answer:** A
+
+---
+
+### Q51.
+
+Page table stores:
+
+* A) Process state
+* B) Frame numbers
+* C) Priorities
+* D) Files
+
+**Answer:** B
+
+---
+
+### Q52.
+
+Segmentation uses:
+
+* A) Fixed size blocks
+* B) Variable size blocks
+* C) Equal size frames
+* D) FIFO
+
+**Answer:** B
+
+---
+
+### Q53.
+
+Segment table contains:
+
+* A) Base and Limit
+* B) PID
+* C) Priority
+* D) Time quantum
+
+**Answer:** A
+
+---
+
+### Q54.
+
+Virtual memory allows:
+
+* A) Larger logical memory than physical memory
+* B) Smaller memory
+* C) No memory
+* D) No paging
+
+**Answer:** A
+
+---
+
+### Q55.
+
+Demand paging loads page:
+
+* A) At startup
+* B) When required
+* C) Never
+* D) Randomly
+
+**Answer:** B
+
+---
+
+### Q56.
+
+Page fault occurs when:
+
+* A) Page found
+* B) Page absent in memory
+* C) CPU busy
+* D) Disk full
+
+**Answer:** B
+
+---
+
+### Q57.
+
+Thrashing is caused by:
+
+* A) Excessive paging
+* B) Excessive scheduling
+* C) Excessive deadlock
+* D) Excessive files
+
+**Answer:** A
+
+---
+
+### Q58.
+
+FIFO page replacement removes:
+
+* A) Most recent page
+* B) Oldest page
+* C) Least used page
+* D) Random page
+
+**Answer:** B
+
+---
+
+### Q59.
+
+Belady's anomaly occurs in:
+
+* A) FIFO
+* B) LRU
+* C) Optimal
+* D) LFU
+
+**Answer:** A
+
+---
+
+### Q60.
+
+LRU stands for:
+
+* A) Least Recently Used
+* B) Last Recently Used
+* C) Lowest Resource Usage
+* D) Logical Resource Unit
+
+**Answer:** A
+
+---
+
+### Q61.
+
+Optimal page replacement replaces:
+
+* A) Oldest page
+* B) Random page
+* C) Page not used for longest future time
+* D) Current page
+
+**Answer:** C
+
+---
+
+### Q62.
+
+Which page replacement gives minimum faults?
+
+* A) FIFO
+* B) LRU
+* C) Optimal
+* D) FCFS
+
+**Answer:** C
+
+---
+
+### Q63.
+
+LRU is based on:
+
+* A) Future knowledge
+* B) Past usage
+* C) Randomness
+* D) Priority
+
+**Answer:** B
+
+---
+
+### Q64.
+
+Page fault service time includes:
+
+* A) Disk access
+* B) Interrupt handling
+* C) Page table update
+* D) All of these
+
+**Answer:** D
+
+---
+
+### Q65.
+
+Internal fragmentation is common in:
+
+* A) Paging
+* B) Segmentation
+* C) Pure partitioning
+* D) None
+
+**Answer:** A
+
+---
+
+# File Systems
+
+### Q66.
+
+A file is:
+
+* A) Collection of related data
+* B) CPU register
+* C) Process
+* D) Thread
+
+**Answer:** A
+
+---
+
+### Q67.
+
+Directory contains:
+
+* A) User programs
+* B) File information
+* C) CPU data
+* D) PCB
+
+**Answer:** B
+
+---
+
+### Q68.
+
+Which allocation is easiest to implement?
+
+* A) Indexed
+* B) Linked
+* C) Contiguous
+* D) Dynamic
+
+**Answer:** C
+
+---
+
+### Q69.
+
+Contiguous allocation suffers from:
+
+* A) External fragmentation
+* B) Deadlock
+* C) Thrashing
+* D) Starvation
+
+**Answer:** A
+
+---
+
+### Q70.
+
+Linked allocation eliminates:
+
+* A) Internal fragmentation
+* B) External fragmentation
+* C) Paging
+* D) Scheduling
+
+**Answer:** B
+
+---
+
+### Q71.
+
+FAT stands for:
+
+* A) File Allocation Table
+* B) File Access Table
+* C) Fixed Allocation Table
+* D) Fast Allocation Table
+
+**Answer:** A
+
+---
+
+### Q72.
+
+NTFS is a:
+
+* A) File system
+* B) Scheduling algorithm
+* C) Memory technique
+* D) Process state
+
+**Answer:** A
+
+---
+
+### Q73.
+
+UNIX file system follows:
+
+* A) Tree structure
+* B) Ring structure
+* C) Mesh structure
+* D) Linear structure
+
+**Answer:** A
+
+---
+
+### Q74.
+
+File protection is achieved using:
+
+* A) Access rights
+* B) Passwords
+* C) Permissions
+* D) All of these
+
+**Answer:** D
+
+---
+
+### Q75.
+
+Which file allocation supports direct access?
+
+* A) Contiguous
+* B) Indexed
+* C) Both A and B
+* D) Linked only
+
+**Answer:** C
+
+---
+
+# Device Management
+
+### Q76.
+
+Device driver acts as:
+
+* A) Interface between OS and hardware
+* B) Memory manager
+* C) Scheduler
+* D) Compiler
+
+**Answer:** A
+
+---
+
+### Q77.
+
+Spooling stands for:
+
+* A) Simultaneous Peripheral Operations On-Line
+* B) Sequential Peripheral Operations
+* C) Shared Peripheral Output
+* D) None
+
+**Answer:** A
+
+---
+
+### Q78.
+
+Printer is generally:
+
+* A) Input device
+* B) Output device
+* C) Storage device
+* D) Memory device
+
+**Answer:** B
+
+---
+
+### Q79.
+
+DMA stands for:
+
+* A) Direct Memory Access
+* B) Dynamic Memory Access
+* C) Data Memory Access
+* D) Device Memory Allocation
+
+**Answer:** A
+
+---
+
+### Q80.
+
+DMA improves:
+
+* A) CPU utilization
+* B) Memory fragmentation
+* C) Deadlock
+* D) Starvation
+
+**Answer:** A
+
+---
+
+# PYQ-Level Mixed Questions
+
+### Q81.
+
+Which scheduling algorithm may cause starvation?
+
+* A) FCFS
+* B) Priority
+* C) Round Robin
+* D) FIFO
+
+**Answer:** B
+
+### Q82.
+
+Semaphore value used for mutual exclusion:
+
+* A) 0
+* B) 1
+* C) 2
+* D) Infinite
+
+**Answer:** B
+
+### Q83.
+
+Banker's algorithm requires:
+
+* A) Maximum need information
+* B) File names
+* C) PCB
+* D) Threads
+
+**Answer:** A
+
+### Q84.
+
+Deadlock recovery can be done by:
+
+* A) Resource preemption
+* B) Process termination
+* C) Both
+* D) None
+
+**Answer:** C
+
+### Q85.
+
+Paging is implemented using:
+
+* A) Page table
+* B) Segment table
+* C) PCB
+* D) FAT
+
+**Answer:** A
+
+### Q86.
+
+Which suffers Belady anomaly?
+
+* A) FIFO
+* B) LRU
+* C) Optimal
+* D) LFU
+
+**Answer:** A
+
+### Q87.
+
+Virtual memory is commonly implemented by:
+
+* A) Segmentation
+* B) Paging
+* C) Registers
+* D) Cache
+
+**Answer:** B
+
+### Q88.
+
+Round Robin is suitable for:
+
+* A) Batch systems
+* B) Interactive systems
+* C) Deadlock systems
+* D) Embedded systems
+
+**Answer:** B
+
+### Q89.
+
+Context switch occurs when:
+
+* A) CPU changes process
+* B) Memory changes
+* C) Disk changes
+* D) File changes
+
+**Answer:** A
+
+### Q90.
+
+Ready queue contains:
+
+* A) Running processes
+* B) Ready processes
+* C) Blocked processes
+* D) Dead processes
+
+**Answer:** B
+
+### Q91.
+
+Monitor solves:
+
+* A) Synchronization problem
+* B) Scheduling
+* C) Paging
+* D) Deadlock detection
+
+**Answer:** A
+
+### Q92.
+
+Pipe is used for:
+
+* A) Memory allocation
+* B) IPC
+* C) Scheduling
+* D) Paging
+
+**Answer:** B
+
+### Q93.
+
+A page fault is handled by:
+
+* A) CPU
+* B) OS
+* C) Compiler
+* D) Loader
+
+**Answer:** B
+
+### Q94.
+
+The Optimal algorithm requires:
+
+* A) Past knowledge
+* B) Future knowledge
+* C) Current knowledge
+* D) Random selection
+
+**Answer:** B
+
+### Q95.
+
+Which memory scheme supports user view of memory?
+
+* A) Paging
+* B) Segmentation
+* C) FIFO
+* D) LRU
+
+**Answer:** B
+
+### Q96.
+
+File system primarily manages:
+
+* A) Processes
+* B) Files and directories
+* C) Threads
+* D) CPU
+
+**Answer:** B
+
+### Q97.
+
+Device driver is loaded into:
+
+* A) Main memory
+* B) CPU register
+* C) Cache only
+* D) Hard disk only
+
+**Answer:** A
+
+### Q98.
+
+Which is not a process state?
+
+* A) New
+* B) Ready
+* C) Running
+* D) Compiling
+
+**Answer:** D
+
+### Q99.
+
+The waiting time in FCFS can be:
+
+* A) Minimum
+* B) Maximum
+* C) Zero always
+* D) Fixed
+
+**Answer:** B
+
+### Q100.
+
+The heart of an Operating System is:
+
+* A) Shell
+* B) Kernel
+* C) Compiler
+* D) Loader
+
+**Answer:** B
