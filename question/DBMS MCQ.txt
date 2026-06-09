@@ -1,0 +1,1795 @@
+Here is a comprehensive 100-question practice set tailored for the **DSSSB TGT Computer Science** exam, based exactly on the core DBMS topics you requested.
+
+As a teacher, my advice is to carefully analyze the underlying concept of each question—especially relational algebra, normalization, and SQL queries—as DSSSB frequently tests deep conceptual understanding along with factual memory.
+
+---
+
+### **Section 1: Three-Schema Architecture & Data Independence (Questions 1–10)**
+
+**Q1. Which schema level in the three-schema architecture describes what data is actually stored in the database and what relationships exist among those data?** A) Physical Level
+
+B) Conceptual Level
+
+C) External Level
+
+D) View Level
+
+*Answer: B* *Rationale: The conceptual level describes the structure of the whole database for a community of users, hiding the details of physical storage structures.*
+
+**Q2. The ability to modify the internal schema without causing application programs to be rewritten is called:** A) Logical Data Independence
+
+B) Physical Data Independence
+
+C) Structural Data Independence
+
+D) Conceptual Data Independence
+
+*Answer: B* *Rationale: Physical data independence is the capacity to change the internal schema without needing to change the conceptual or external schemas.*
+
+**Q3. External schemas are also known as:** A) Logical Views
+
+B) Physical Views
+
+C) User Views
+
+D) Internal Views
+
+*Answer: C* *Rationale: The external schema or view level describes the part of the database that a specific user group is interested in.*
+
+**Q4. In a database system, mappings are used to transform requests and results between:** A) Different user applications
+
+B) The database administrator and the users
+
+C) The different levels of the three-schema architecture
+
+D) Operating system files and DBMS storage
+
+*Answer: C* *Rationale: Mappings between internal/conceptual and conceptual/external levels are crucial for achieving data independence.*
+
+**Q5. If a change to the conceptual schema does not affect the external schemas, this is an example of:** A) Physical Data Independence
+
+B) Logical Data Independence
+
+C) View Data Independence
+
+D) Schema Evolution
+
+*Answer: B* *Rationale: Logical data independence is the ability to modify the conceptual schema without changing external schemas or application programs.*
+
+**Q6. Which level of DBMS architecture is closest to the users?** A) Internal Level
+
+B) Physical Level
+
+C) Conceptual Level
+
+D) External Level
+
+*Answer: D* *Rationale: The external level (view level) is the closest to the users and handles their direct interaction with the system.*
+
+**Q7. The description of a database is called:** A) Database Instance
+
+B) Database Schema
+
+C) Database State
+
+D) Database Metadata
+
+*Answer: B* *Rationale: The schema is the overall design/description of the database, whereas the instance is the data at a specific moment.*
+
+**Q8. Which of the following is true regarding data independence?** A) Logical data independence is easier to achieve than physical data independence.
+
+B) Physical data independence is easier to achieve than logical data independence.
+
+C) Both are equally easy to achieve.
+
+D) Neither can be achieved in modern relational systems.
+
+*Answer: B* *Rationale: Physical data independence is easier because application programs are heavily dependent on the logical structure (tables/columns) rather than physical storage details (indexes/files).*
+
+**Q9. Who is primarily responsible for defining the conceptual schema in an organization?** A) End-user
+
+B) Database Administrator (DBA)
+
+C) Application Programmer
+
+D) System Analyst
+
+*Answer: B* *Rationale: The DBA is responsible for creating and maintaining the conceptual schema and ensuring it satisfies organizational requirements.*
+
+**Q10. A database state or snapshot refers to:** A) The layout design of the tables
+
+B) The data in the database at a specific point in time
+
+C) The compilation of DDL statements
+
+D) The history of all executed transactions
+
+*Answer: B* *Rationale: The database state or instance represents the actual data content stored at any given moment.*
+
+---
+
+### **Section 2: Data Models & ER Diagrams (Questions 11–25)**
+
+**Q11. In an Entity-Relationship (ER) model, a "Weak Entity" is identified by using:** A) Its own primary key
+
+B) A primary key of another entity along with its own partial key
+
+C) A foreign key alone
+
+D) A super key
+
+*Answer: B* *Rationale: A weak entity does not have sufficient attributes to form a primary key on its own; it depends on an identifying owner entity via a partial key (discriminator).*
+
+**Q12. In an ER diagram, a double rectangle represents:** A) Relationship set
+
+B) Multivalued attribute
+
+C) Weak entity set
+
+D) Derived attribute
+
+*Answer: C* *Rationale: Standard Chen notation uses a double rectangle for weak entity sets and double diamonds for identifying relationships.*
+
+**Q13. An attribute that can be broken down into smaller sub-parts is called a:** A) Simple attribute
+
+B) Single-valued attribute
+
+C) Complex attribute
+
+D) Composite attribute
+
+*Answer: D* *Rationale: Composite attributes (e.g., Name broken into First_Name, Last_Name) can be divided into simpler sub-attributes.*
+
+**Q14. In an ER diagram, an ellipse with a dashed line represents a:** A) Multivalued attribute
+
+B) Composite attribute
+
+C) Derived attribute
+
+D) Key attribute
+
+*Answer: C* *Rationale: Derived attributes (like Age derived from Date_of_Birth) are represented by dashed ellipses.*
+
+**Q15. What is the cardinality ratio for a relationship where one supervisor can manage many employees, but an employee can have at most one supervisor?** A) 1:1
+
+B) 1:N
+
+C) M:N
+
+D) N:1
+
+*Answer: B* *Rationale: One supervisor to many (N) employees yields a 1:N cardinality ratio.*
+
+**Q16. The number of entity sets that participate in a relationship set is called the:** A) Cardinality of the relationship
+
+B) Degree of the relationship
+
+C) Participation constraints
+
+D) Role of the relationship
+
+*Answer: B* *Rationale: The degree refers to the number of participating entities (e.g., binary = degree 2, ternary = degree 3).*
+
+**Q17. Which of the following data models organizes data in a tree-like structure?** A) Relational Model
+
+B) Network Model
+
+C) Hierarchical Model
+
+D) Object-Oriented Model
+
+*Answer: C* *Rationale: The hierarchical model uses a parent-child, tree-like data structure.*
+
+**Q18. If every entity in set A must participate in at least one relationship in set R, the participation of A in R is said to be:** A) Partial
+
+B) Total
+
+C) Optional
+
+D) Single
+
+*Answer: B* *Rationale: Total participation (indicated by double lines) means every entity in the set must be involved in the relationship.*
+
+**Q19. In a relational model, a row is called a _______ and a column is called an _______.** A) Attribute, Tuple
+
+B) Tuple, Attribute
+
+C) Relation, Attribute
+
+D) Field, Record
+
+*Answer: B* *Rationale: In formal relational model terminology, rows are tuples and columns are attributes.*
+
+**Q20. The total number of tuples in a relation is known as its:** A) Degree
+
+B) Domain
+
+C) Cardinality
+
+D) Schema
+
+*Answer: C* *Rationale: Cardinality is the number of rows (tuples); degree is the number of columns (attributes).*
+
+**Q21. What is a "Multivalued Attribute" in an ER model?** A) An attribute that has more than one data type
+
+B) An attribute that can have a set of values for a single entity instance
+
+C) An attribute that takes values from multiple tables
+
+D) An attribute that uniquely identifies an entity
+
+*Answer: B* *Rationale: A multivalued attribute (e.g., Phone_Number, where someone can have multiple numbers) is drawn with a double ellipse.*
+
+**Q22. The term "Domain" in a relational model refers to:** A) The physical storage path of a relation
+
+B) The set of permissible, atomic values for an attribute
+
+C) The maximum number of tuples a relation can hold
+
+D) The security clearance needed to view a table
+
+*Answer: B* *Rationale: A domain defines the valid pool of values an attribute can take (e.g., integers, strings of length 10).*
+
+**Q23. In an ER diagram, a total participation constraint is represented by:** A) A dashed line
+
+B) A double line
+
+C) A bold single line
+
+D) A diamond box
+
+*Answer: B* *Rationale: Total participation is represented by double lines connecting the entity to the relationship.*
+
+**Q24. Reduction of an ER diagram to tables requires representing an M:N relationship set as:** A) A foreign key in one of the existing tables
+
+B) A separate, new table containing keys from both participating entity sets
+
+C) Merging the two entity tables together
+
+D) A weak entity table
+
+*Answer: B* *Rationale: Many-to-many relationships must be mapped to a distinct table containing the primary keys of both participating entities as its composite foreign/primary key.*
+
+**Q25. Which concept handles the "IS-A" relationship in extended ER modeling?** A) Aggregation
+
+B) Generalization/Specialization
+
+C) Encapsulation
+
+D) Association
+
+*Answer: B* *Rationale: Specialization/Generalization models "IS-A" relationships where a subclass inherits attributes from a superclass (e.g., Secretary IS-A Employee).*
+
+---
+
+### **Section 3: Keys & Integrity Constraints (Questions 26–40)**
+
+**Q26. A super key that contains no redundant attributes (a minimal super key) is called a:** A) Primary Key
+
+B) Foreign Key
+
+C) Candidate Key
+
+D) Secondary Key
+
+*Answer: C* *Rationale: A candidate key is a minimal super key; no proper subset of it can uniquely identify a tuple.*
+
+**Q27. The Entity Integrity constraint states that:** A) A foreign key can never be null.
+
+B) No component of a primary key can be null.
+
+C) Every table must have a foreign key.
+
+D) Candidate keys cannot contain duplicate values.
+
+*Answer: B* *Rationale: Entity Integrity ensures that the primary key must have unique, non-null values to properly identify each tuple.*
+
+**Q28. If a foreign key value in Table A references a primary key value in Table B, the Referential Integrity constraint ensures that:** A) The foreign key value must exist in Table B or be null.
+
+B) The foreign key value must match exactly with all values in Table B.
+
+C) Table B cannot contain any null values.
+
+D) Table A and Table B must have the same number of rows.
+
+*Answer: A* *Rationale: Referential integrity states that a foreign key must match a valid primary key value in the referenced relation, or it must be entirely null.*
+
+**Q29. How many primary keys can a single relation have?** A) Multiple
+
+B) Exactly two
+
+C) At most one
+
+D) Dependent on the number of attributes
+
+*Answer: C* *Rationale: A table can have multiple candidate keys, but the DBA chooses exactly one to serve as the primary key.*
+
+**Q30. If we drop an attribute from a super key and the remaining attributes still uniquely identify every tuple, the original key was:** A) A Candidate Key
+
+B) A Primary Key
+
+C) Not a minimal super key
+
+D) A Foreign Key
+
+*Answer: C* *Rationale: If an attribute can be removed while retaining uniqueness, the original set was a non-minimal super key.*
+
+**Q31. Which integrity constraint restricts the values that can be inserted into an attribute based on a specific condition (e.g., Age > 18)?** A) Entity Integrity
+
+B) Referential Integrity
+
+C) Domain Constraint / Check Constraint
+
+D) Key Constraint
+
+*Answer: C* *Rationale: Domain constraints specify the permissible values for attributes, often enforced via `CHECK` constraints in SQL.*
+
+**Q32. Consider relation $R(A, B, C, D)$. If $\{A, B\}$ is a candidate key, which of the following is definitely a super key?** A) $\{A, C\}$
+
+B) $\{B, C, D\}$
+
+C) $\{A, B, C\}$
+
+D) $\{A\}$
+
+*Answer: C* *Rationale: Any superset of a candidate key is automatically a super key. Since $\{A, B\}$ is a candidate key, adding $C$ makes $\{A, B, C\}$ a super key.*
+
+**Q33. A foreign key can reference:** A) Only a primary key in another table
+
+B) Only a unique key in the same table
+
+C) A primary key or a unique candidate key in another or the same table
+
+D) Any arbitrary column in another table
+
+*Answer: C* *Rationale: A foreign key can reference a primary key or any unique/candidate key, and can target another table or loop back to the same table (self-referencing).*
+
+**Q34. What happens under a "ON DELETE CASCADE" referential action?** A) If a referenced row is deleted, the referencing row's foreign key is set to NULL.
+
+B) If a referenced row is deleted, the referencing row is automatically deleted as well.
+
+C) The system prevents the deletion of the referenced row.
+
+D) The system throws an entity integrity error.
+
+*Answer: B* *Rationale: `CASCADE` propagates the deletion of a parent record down to all corresponding child records.*
+
+**Q35. A key consisting of more than one attribute is called a:** A) Composite Key
+
+B) Foreign Key
+
+C) Primary Key
+
+D) Secondary Key
+
+*Answer: A* *Rationale: Any key that relies on two or more columns combined together is a composite key.*
+
+**Q36. Candidate keys that are not selected as the primary key are called:** A) Super keys
+
+B) Foreign keys
+
+C) Alternate keys
+
+D) Subordinate keys
+
+*Answer: C* *Rationale: Alternate keys are the leftover candidate keys after one has been designated as the primary key.*
+
+**Q37. Which of the following cannot be part of an integrity constraint definition?** A) Data type specs
+
+B) Default values
+
+C) Indexes
+
+D) Foreign key relations
+
+*Answer: C* *Rationale: Indexes are physical performance tuning structures, not structural data integrity constraints.*
+
+**Q38. Can a primary key be composed of attributes that are also foreign keys?** A) Yes, always
+
+B) No, never
+
+C) Only if the database is in 1NF
+
+D) Only if the keys point to weak entities
+
+*Answer: A* *Rationale: This is standard practice in bridge/junction tables representing many-to-many relationships or when mapping weak entities.*
+
+**Q39. If an attribute $X$ is a foreign key referencing table $Y$, the domain of $X$ must be:** A) Identical to or compatible with the domain of the referenced key in $Y$
+
+B) Larger than the domain of $Y$
+
+C) Independent of the domain of $Y$
+
+D) Made up of character strings only
+
+*Answer: A* *Rationale: To check referential integrity, both the foreign key and the referenced key must share compatible domains.*
+
+**Q40. Which constraint prevents two rows in a table from having identical values across a specific set of non-primary columns?** A) DEFAULT
+
+B) UNIQUE
+
+C) CHECK
+
+D) NOT NULL
+
+*Answer: B* *Rationale: The `UNIQUE` constraint guarantees uniqueness for a column or a set of columns without making them the primary key.*
+
+---
+
+### **Section 4: Relational Algebra & Calculus (Questions 41–55)**
+
+**Q41. Which operator in relational algebra acts as a horizontal filter to select a subset of tuples satisfying a predicate?** A) Project ($\pi$)
+
+B) Select ($\sigma$)
+
+C) Join ($\bowtie$)
+
+D) Rename ($\rho$)
+
+*Answer: B* *Rationale: The Selection ($\sigma$) operator filters rows (horizontally) based on a given condition.*
+
+**Q42. The Project operator ($\pi$) in relational algebra performs a _______ operation.** A) Horizontal filtering
+
+B) Vertical filtering by selecting specific attributes
+
+C) Cartesian product
+
+D) Set difference
+
+*Answer: B* *Rationale: Projection ($\pi$) isolates specific columns (vertically) and drops duplicates from the resulting set.*
+
+**Q43. Which of the following relational algebra operations is NOT a unary operation?** A) Selection
+
+B) Projection
+
+C) Rename
+
+D) Cartesian Product
+
+*Answer: D* *Rationale: Cartesian product requires two relations (binary), whereas selection, projection, and rename take only one relation (unary).*
+
+**Q44. For two relations $R$ and $S$ to be compatible for set operations (Union, Intersection, Set Difference), they must have:** A) The same number of tuples
+
+B) The same primary key
+
+C) The same degree and compatible attribute domains in order
+
+D) The same size on disk
+
+*Answer: C* *Rationale: Union compatibility requires that both relations have the same number of attributes (same degree) and that corresponding columns share matching domains.*
+
+**Q45. If relation $R$ has 5 tuples and relation $S$ has 10 tuples, how many tuples will be in $R \times S$?** A) 15
+
+B) 50
+
+C) 5
+
+D) 2
+
+*Answer: B* *Rationale: The Cartesian product ($R \times S$) pairs every row of $R$ with every row of $S$, giving $5 \times 10 = 50$ rows.*
+
+**Q46. A Join operation that joins two relations based on an equality condition across columns with identical names, automatically removing duplicate columns, is called a:** A) Theta Join
+
+B) Equijoin
+
+C) Natural Join
+
+D) Outer Join
+
+*Answer: C* *Rationale: Natural Join ($\bowtie$) searches for attributes with identical names, equates them, and keeps only one copy of the join columns.*
+
+**Q47. Which join includes all tuples from the left relation even if they don't find a matching tuple in the right relation?** A) Right Outer Join
+
+B) Full Outer Join
+
+C) Left Outer Join
+
+D) Inner Join
+
+*Answer: C* *Rationale: The Left Outer Join pads un-matched attributes from the right relation with NULLs, preserving all rows from the left.*
+
+**Q48. Tuple Relational Calculus (TRC) is a _______ query language.** A) Procedural
+
+B) Non-procedural (Declarative)
+
+C) Structural
+
+D) Imperative
+
+*Answer: B* *Rationale: Relational calculus describes *what* data to retrieve without stating the step-by-step procedure (*how* to get it). Relational algebra is procedural.*
+
+**Q49. In Domain Relational Calculus (DRC), variables represent:** A) Entire tuples
+
+B) Individual attribute domains/values
+
+C) Relations
+
+D) Database schemas
+
+*Answer: B* *Rationale: TRC uses variables for whole rows (tuples), while DRC uses variables for individual column domains.*
+
+**Q50. The relational algebra expression $\sigma_{\text{age} > 20}(R)$ is equivalent to which SQL clause?** A) SELECT age FROM R
+
+B) SELECT * FROM R WHERE age > 20
+
+C) SELECT DISTINCT * FROM R WHERE age > 20
+
+D) PROJECT * FROM R WHERE age > 20
+
+*Answer: B (or C fundamentally, but conceptually B)* *Rationale: Selection maps directly to the `WHERE` clause in SQL, though relational algebra automatically removes duplicates.*
+
+**Q51. What is the main difference between an Equijoin and a Natural Join?** A) Equijoin keeps duplicate columns; Natural Join eliminates duplicate columns.
+
+B) Equijoin uses any comparison operator; Natural Join uses equality only.
+
+C) Natural Join requires a Cartesian product; Equijoin does not.
+
+D) There is no difference.
+
+*Answer: A* *Rationale: Equijoin retains identical join columns from both tables, whereas Natural Join merges them into a single column.*
+
+**Q52. The Division operator ($\div$) in relational algebra is most useful for queries containing which keyword phrase?** A) "At least one"
+
+B) "None of the"
+
+C) "All of the"
+
+D) "Exactly equal to"
+
+*Answer: C* *Rationale: Division ($R \div S$) finds tuples in $R$ that are paired with *all* tuples in $S$. (e.g., "Find students who took *all* courses").*
+
+**Q53. Which of the following is a basic/primitive operator in relational algebra (cannot be derived from others)?** A) Natural Join
+
+B) Intersection
+
+C) Set Difference
+
+D) Division
+
+*Answer: C* *Rationale: The 5 basic operators are Select ($\sigma$), Project ($\pi$), Union ($\cup$), Set Difference ($-$), and Cartesian Product ($\times$).*
+
+**Q54. In Relational Calculus, the existential quantifier $\exists$ reads as:** A) For all
+
+B) There exists
+
+C) Does not exist
+
+D) Unique element
+
+*Answer: B* *Rationale: $\exists$ is the existential quantifier meaning "there exists at least one."*
+
+**Q55. If a query language can express any query that can be expressed in relational algebra, it is said to be:** A) Turing Complete
+
+B) Relationally Complete
+
+C) Mathematically Sound
+
+D) Declarative
+
+*Answer: B* *Rationale: Relational completeness measures whether a language matches the expressive power of relational algebra.*
+
+---
+
+### **Section 5: Normalization & Functional Dependencies (Questions 56–70)**
+
+**Q56. If an attribute $B$ is functionally dependent on $X$ ($X \rightarrow B$), and $X$ is a subset of a candidate key, then this dependency is called a:** A) Full functional dependency
+
+B) Partial dependency
+
+C) Transitive dependency
+
+D) Trivial dependency
+
+*Answer: B* *Rationale: A partial dependency occurs when a non-prime attribute depends on a proper subset of a composite candidate key.*
+
+**Q57. A relation is in Second Normal Form (2NF) if it is in 1NF and:** A) It contains no transitive dependencies.
+
+B) It contains no partial dependencies.
+
+C) Every determinant is a super key.
+
+D) There are no multivalued attributes.
+
+*Answer: B* *Rationale: 2NF eliminates partial dependencies; all non-prime attributes must be fully functionally dependent on the primary key.*
+
+**Q58. Transitive dependencies are removed to achieve which normal form?** A) 2NF
+
+B) 3NF
+
+C) BCNF
+
+D) 4NF
+
+*Answer: B* *Rationale: 3NF requires a relation to be in 2NF with no transitive dependencies (where a non-prime attribute determines another non-prime attribute).*
+
+**Q59. A relation is in Boyce-Codd Normal Form (BCNF) if, for every non-trivial functional dependency $X \rightarrow Y$:** A) $Y$ is a prime attribute.
+
+B) $X$ is a super key.
+
+C) $X$ is a prime attribute.
+
+D) $X \cap Y = \emptyset$.
+
+*Answer: B* *Rationale: BCNF is stricter than 3NF. It requires that the left-hand side ($X$) of every non-trivial functional dependency must be a super key.*
+
+**Q60. What requirement must be met for a relation to be in First Normal Form (1NF)?** A) No partial dependencies
+
+B) No multi-valued or composite attributes (only atomic values)
+
+C) No transitive dependencies
+
+D) A single attribute primary key
+
+*Answer: B* *Rationale: 1NF requires all attribute values to be atomic (indivisible).*
+
+**Q61. If $A \rightarrow B$ and $B \rightarrow C$, then $A \rightarrow C$. This rule is known as:** A) Reflexivity rule
+
+B) Augmentation rule
+
+C) Transitivity rule
+
+D) Decomposition rule
+
+*Answer: C* *Rationale: This is one of Armstrong's Axioms, specifically the Transitivity rule.*
+
+**Q62. Given relation $R(A, B, C)$ with functional dependencies $A \rightarrow B$ and $B \rightarrow C$. What is the highest normal form of this relation?** A) 1NF
+
+B) 2NF
+
+C) 3NF
+
+D) BCNF
+
+*Answer: B* *Rationale: The candidate key is $A$. $B \rightarrow C$ is a dependency where a non-prime attribute ($B$) determines another non-prime attribute ($C$), making it a transitive dependency. Thus, it fails 3NF but satisfies 2NF.*
+
+**Q63. An attribute that is a member of any candidate key for a relation is called a:** A) Non-prime attribute
+
+B) Prime attribute
+
+C) Key attribute
+
+D) Core attribute
+
+*Answer: B* *Rationale: Attributes belonging to any candidate key are prime attributes; others are non-prime.*
+
+**Q64. Lossless-join decomposition ensures that:** A) No data values are updated to NULL during a join.
+
+B) Rejoining the decomposed tables reproduces the exact original relation without extra spurious tuples.
+
+C) Tables do not lose any rows during deletion.
+
+D) No duplicate keys can be generated.
+
+*Answer: B* *Rationale: Lossless-join decomposition guarantees that a natural join of the decomposed tables yields the exact original table (no more, no less).*
+
+**Q65. Which of the following is true about BCNF and 3NF?** A) Every 3NF relation is also in BCNF.
+
+B) Every BCNF relation is also in 3NF.
+
+C) BCNF allows transitive dependencies.
+
+D) 3NF is stricter than BCNF.
+
+*Answer: B* *Rationale: BCNF is a stronger form of 3NF. Any relation in BCNF is automatically in 3NF.*
+
+**Q66. Armstrong's Axioms are said to be "Sound" because:** A) They generate only valid functional dependencies that hold true.
+
+B) They can generate every possible functional dependency.
+
+C) They prevent any null values from being inserted.
+
+D) They work only on relational databases.
+
+*Answer: A* *Rationale: Soundness means the rules cannot derive an incorrect/false dependency.*
+
+**Q67. If the closure of an attribute set $X$ (denoted $X^+$) contains all attributes of a relation, then $X$ is a:** A) Foreign Key
+
+B) Super Key
+
+C) Prime Attribute
+
+D) Secondary Key
+
+*Answer: B* *Rationale: If $X^+$ derives every attribute in the relation, it can uniquely identify all tuples, making it a super key.*
+
+**Q68. The decomposition of a relation is dependency-preserving if:** A) The primary key remains unchanged.
+
+B) The union of the functional dependencies of the pieces is equivalent to the original set of dependencies.
+
+C) No keys are converted into foreign keys.
+
+D) Functional dependencies are completely removed.
+
+*Answer: B* *Rationale: Dependency preservation ensures we can verify all original constraints within individual tables without performing costly joins.*
+
+**Q69. Can a relation be in 3NF but NOT in BCNF?** A) No, never
+
+B) Yes, if it has overlapping composite candidate keys
+
+C) Yes, if it has only one candidate key
+
+D) No, because 3NF and BCNF are identical
+
+*Answer: B* *Rationale: 3NF allows the dependency $X \rightarrow Y$ if $Y$ is a prime attribute. BCNF forbids this if $X$ is not a super key. This situation happens when composite candidate keys overlap.*
+
+**Q70. What is the main disadvantage of over-normalizing a database schema (e.g., going beyond BCNF unnecessarily)?** A) Increased data redundancy
+
+B) Performance degradation due to excessive table joins
+
+C) Insertion anomalies
+
+D) Loss of entity integrity
+
+*Answer: B* *Rationale: Breaking data into too many tables requires joining them back together during queries, slowing down read operations.*
+
+---
+
+### **Section 6: SQL - DDL, DML, DQL, DCL, TCL, Joins & Subqueries (Questions 71–85)**
+
+**Q71. Which component of SQL is used to define or modify the database structure, such as creating or altering tables?** A) DML
+
+B) DCL
+
+C) DDL
+
+D) TCL
+
+*Answer: C* *Rationale: DDL (Data Definition Language) includes commands like `CREATE`, `ALTER`, `DROP`, and `TRUNCATE`.*
+
+**Q72. Which of the following commands belongs to DML (Data Manipulation Language)?** A) ALTER
+
+B) GRANT
+
+C) UPDATE
+
+D) COMMIT
+
+*Answer: C* *Rationale: `UPDATE`, `INSERT`, and `DELETE` modify table data and are part of DML.*
+
+**Q73. The SQL commands COMMIT and ROLLBACK fall under which category?** A) DDL
+
+B) DCL
+
+C) TCL
+
+D) DQL
+
+*Answer: C* *Rationale: TCL (Transaction Control Language) manages changes made by DML statements.*
+
+**Q74. What is the fundamental difference between the DROP and TRUNCATE commands?** A) DROP removes rows; TRUNCATE removes the table structure.
+
+B) DROP removes the entire table structure and data; TRUNCATE removes all rows but preserves the table structure.
+
+C) DROP can be rolled back; TRUNCATE cannot.
+
+D) There is no difference.
+
+*Answer: B* *Rationale: `DROP` removes the entire table from the data dictionary. `TRUNCATE` deletes all rows quickly but leaves the blank table structure intact.*
+
+**Q75. To filter rows based on an aggregate function condition (e.g., `COUNT(id) > 5`), which clause must be used?** A) WHERE
+
+B) HAVING
+
+C) GROUP BY
+
+D) ORDER BY
+
+*Answer: B* *Rationale: The `WHERE` clause filters individual rows before grouping; `HAVING` filters grouped data after a `GROUP BY` execution.*
+
+**Q76. Consider the query: `SELECT name FROM emp WHERE salary > ANY (SELECT salary FROM emp WHERE dept = 'IT')`. What does this return?** A) Employees earning more than the highest-paid IT employee.
+
+B) Employees earning more than at least one IT employee.
+
+C) Employees earning more than the average IT salary.
+
+D) Only IT employees.
+
+*Answer: B* *Rationale: The `> ANY` operator returns true if the value is greater than *at least one* value in the subquery result set.*
+
+**Q77. Which SQL join returns all rows from both tables, matching rows where possible, and placing NULLs where matches are missing?** A) Inner Join
+
+B) Left Join
+
+C) Full Outer Join
+
+D) Cross Join
+
+*Answer: C* *Rationale: A Full Outer Join combines the behavior of Left and Right Outer Joins.*
+
+**Q78. To remove duplicate rows from the output of an SQL query, use the keyword:** A) UNIQUE
+
+B) DISTINCT
+
+C) SINGLE
+
+D) ALL
+
+*Answer: B* *Rationale: `SELECT DISTINCT` filters out duplicate tuples from query results.*
+
+**Q79. Which SQL constraint ensures that a column cannot accept a NULL value?** A) UNIQUE
+
+B) DEFAULT
+
+C) NOT NULL
+
+D) CHECK
+
+*Answer: C* *Rationale: The `NOT NULL` constraint forces a column to always contain a value.*
+
+**Q80. What is a subquery?** A) A query executed after a transaction finishes
+
+B) A query nested inside another SQL statement
+
+C) A separate view stored in the database
+
+D) A query containing only join operations
+
+*Answer: B* *Rationale: A subquery (inner query) is embedded inside an outer statement like `SELECT`, `INSERT`, `UPDATE`, or `DELETE`.*
+
+**Q81. The commands GRANT and REVOKE belong to:** A) TCL
+
+B) DCL
+
+C) DML
+
+D) DDL
+
+*Answer: B* *Rationale: DCL (Data Control Language) manages database permissions and access controls.*
+
+**Q82. In an SQL query, if you use a `GROUP BY` clause, any column in the `SELECT` list that is not part of an aggregate function must be:** A) A primary key
+
+B) Listed in the `WHERE` clause
+
+C) Listed in the `GROUP BY` clause
+
+D) A numeric data type
+
+*Answer: C* *Rationale: Any unaggregated column selected must appear in the `GROUP BY` clause to avoid ambiguous row mapping.*
+
+**Q83. Which wildcard character matches zero or more characters in an SQL `LIKE` clause?** A) Underscore (`_`)
+
+B) Percent sign (`%`)
+
+C) Asterisk (`*`)
+
+D) Question mark (`?`)
+
+*Answer: B* *Rationale: In standard SQL, `%` matches zero or more characters, while `_` matches exactly one character.*
+
+**Q84. What happens if you omit the `WHERE` clause in a `DELETE FROM table_name;` statement?** A) The statement throws a syntax error.
+
+B) Only the first row is deleted.
+
+C) All rows in the table are deleted.
+
+D) The table structure is deleted.
+
+*Answer: C* *Rationale: Without a restrictive `WHERE` clause, `DELETE` processes and removes every row in the target table.*
+
+**Q85. Can a subquery reference columns from the outer query?** A) No, subqueries are completely isolated.
+
+B) Yes, this is known as a Correlated Subquery.
+
+C) Only if they use the `UNION` operator.
+
+D) Only within DDL statements.
+
+*Answer: B* *Rationale: A correlated subquery executes repeatedly, once for each candidate row evaluated by the outer query.*
+
+---
+
+### **Section 7: Transaction Processing, ACID Properties & Concurrency Control (Questions 86–95)**
+
+**Q86. Which ACID property ensures that either all operations of a transaction are reflected in the database, or none are?** A) Consistency
+
+B) Isolation
+
+C) Durability
+
+D) Atomicity
+
+*Answer: D* *Rationale: Atomicity enforces an "all-or-nothing" execution policy for transactions.*
+
+**Q87. The "Durability" property in ACID guarantees that:** A) Transactions do not interfere with each other.
+
+B) The database changes survive even in the event of a system crash once a transaction commits.
+
+C) The database transitions from one valid state to another.
+
+D) Complete structural data integrity is maintained.
+
+*Answer: B* *Rationale: Durability ensures that committed updates are permanently recorded in non-volatile storage.*
+
+**Q88. Which concurrency problem occurs when a transaction reads data updated by another uncommitted transaction, which later rolls back?** A) Lost Update Problem
+
+B) Dirty Read Problem
+
+C) Non-repeatable Read Problem
+
+D) Phantom Read Problem
+
+*Answer: B* *Rationale: A dirty read happens when a transaction views data from uncommitted modifications that eventually get undone.*
+
+**Q89. In Concurrency Control, a schedule is serializable if:** A) It runs all transactions one after another.
+
+B) Its outcome is equivalent to some serial execution of the same transactions.
+
+C) It blocks all write operations.
+
+D) It uses exclusive locks only.
+
+*Answer: B* *Rationale: Serializability is the benchmark for concurrent correctness; a schedule is correct if it behaves exactly like a serial schedule.*
+
+**Q90. Under the Two-Phase Locking (2PL) protocol, a transaction cannot request any new locks once it:** A) Begins execution
+
+B) Enters its shrinking phase (releases its first lock)
+
+C) Commits
+
+D) Encounters a deadlock
+
+*Answer: B* *Rationale: 2PL has two phases: Growing (acquiring locks) and Shrinking (releasing locks). Once a lock is released, no new locks can be acquired.*
+
+**Q91. A state where two or more transactions are stuck waiting for each other to release locks is called:** A) Starvation
+
+B) Deadlock
+
+C) Livelock
+
+D) Serialization Failure
+
+*Answer: B* *Rationale: Deadlock occurs when transactions form a circular wait loop for resources.*
+
+**Q92. Which log record is written to storage to allow the DBMS to undo changes if a transaction fails?** A) Redo log
+
+B) Undo log
+
+C) Write-ahead log
+
+D) Checkpoint log
+
+*Answer: B* *Rationale: Undo logs store original data values to reverse uncommitted modifications during a rollback.*
+
+**Q93. The "Isolation" property of a transaction is primarily managed by which component of the DBMS?** A) Recovery Manager
+
+B) Concurrency Control Manager
+
+C) Buffer Manager
+
+D) File Manager
+
+*Answer: B* *Rationale: Concurrency control techniques (like locking or timestamping) isolate simultaneous transactions from each other.*
+
+**Q94. Strict Two-Phase Locking (Strict 2PL) prevents cascading rollbacks by:** A) Forbidding the shrinking phase entirely.
+
+B) Holding all exclusive (write) locks until the transaction commits or aborts.
+
+C) Releasing read locks instantly.
+
+D) Running transactions serially.
+
+*Answer: B* *Rationale: Holding write locks until the end prevents other transactions from viewing uncommitted data, neutralizing dirty reads and cascading aborts.*
+
+**Q95. The rule stating that log records must reach disk before the actual database modifications are written to disk is called:** A) Write-Ahead Logging (WAL)
+
+B) Log-First Rule
+
+C) Deferred Update Rule
+
+D) Cache Flushing
+
+*Answer: A* *Rationale: WAL guarantees that recovery logs exist on stable storage before data files are modified on disk.*
+
+---
+
+### **Section 8: Overview of Data Warehousing & Data Mining (Questions 96–100)**
+
+**Q96. A Data Warehouse is typically optimized for _______, whereas an operational database is optimized for _______.** A) OLTP, OLAP
+
+B) OLAP, OLTP
+
+C) Data entry, Reporting
+
+D) Encryption, Decryption
+
+*Answer: B* *Rationale: Data warehouses support OLAP (Online Analytical Processing) for complex analysis, while transactional systems handle OLTP (Online Transaction Processing).*
+
+**Q97. The process of extracting hidden, valid, and actionable predictive patterns from massive datasets is known as:** A) Data Structuring
+
+B) Data Warehousing
+
+C) Data Mining
+
+D) Data Normalization
+
+*Answer: C* *Rationale: Data Mining uncovers patterns and knowledge from large data sets.*
+
+**Q98. What does the ETL process stand for in Data Warehousing?** A) Encrypt, Transfer, Load
+
+B) Extract, Transform, Load
+
+C) Evaluate, Test, Leverage
+
+D) Execute, Translate, Log
+
+*Answer: B* *Rationale: ETL stands for Extracting data from source systems, Transforming it to fit business needs, and Loading it into a data warehouse.*
+
+**Q99. In a data warehouse dimensional model, a central table containing numerical business metrics/measurements is called a:** A) Dimension Table
+
+B) Fact Table
+
+C) Schema Table
+
+D) Pivot Table
+
+*Answer: B* *Rationale: Fact tables hold measurable, quantitative metrics and foreign keys to surrounding dimension tables.*
+
+**Q100. Which data mining technique groups a set of objects in such a way that objects in the same group are more similar to each other than to those in other groups?** A) Classification
+
+B) Regression
+
+C) Clustering
+
+D) Association Rule Mining
+
+*Answer: C* *Rationale: Clustering is an unsupervised learning technique used to gather similar data points into clusters without predefined labels.*
+
+Here is a comprehensive list of 100 practice questions covering the Database Management Systems (DBMS) topics specified in your syllabus, tailored for the DSSSB TGT exam.
+
+### **Three-Schema Architecture & Data Independence (Questions 1–10)**
+
+1. **Which level of the three-schema architecture describes what data is stored in the database and what relationships exist among those data?**
+* (A) Physical level
+* (B) Conceptual level
+* (C) External level
+* (D) Storage level
+
+
+2. **The ability to modify the physical schema without causing application programs to be rewritten is called:**
+* (A) Logical Data Independence
+* (B) Physical Data Independence
+* (C) Structural Data Independence
+* (D) Conceptual Data Independence
+
+
+3. **The external level of a three-schema architecture is directly concerned with:**
+* (A) Database Administrators
+* (B) Physical storage structures
+* (C) End-users or application views
+* (D) Entire database structure
+
+
+4. **Which mapping is responsible for transforming requests between the user's view and the global conceptual view?**
+* (A) Conceptual/Internal mapping
+* (B) External/Conceptual mapping
+* (C) External/Internal mapping
+* (D) Physical/Conceptual mapping
+
+
+5. **If a new attribute is added to a database relation, which property ensures that existing user views do not break?**
+* (A) Physical Data Independence
+* (B) Logical Data Independence
+* (C) Integrity constraints
+* (D) Transaction isolation
+
+
+6. **The Internal Schema of a DBMS defines:**
+* (A) The logical design of the database
+* (B) The physical storage structure and access paths
+* (C) The views of individual users
+* (D) The relationships between entities
+
+
+7. **Which of the following is the highest level of data abstraction?**
+* (A) Internal Level
+* (B) Conceptual Level
+* (C) External Level
+* (D) Physical Level
+
+
+8. **In the three-schema architecture, the DBA primarily works at which level to define the global structure of the database?**
+* (A) External
+* (B) Conceptual
+* (C) Physical
+* (D) Client
+
+
+9. **Logical Data Independence is more difficult to achieve than Physical Data Independence because:**
+* (A) Physical storage tools change rapidly.
+* (B) Application programs are heavily dependent on the logical structure of data.
+* (C) Internal mapping is highly complex.
+* (D) Conceptual schemas cannot be altered.
+
+
+10. **The DBMS architecture is divided into three levels to solve which major problem of early file systems?**
+* (A) High cost of hardware
+* (B) Data redundancy and tight coupling of data and programs
+* (C) Network connection failures
+* (D) Multi-user synchronization
+
+
+
+---
+
+### **Data Models & ER Diagrams (Questions 11–25)**
+
+11. **In an ER Diagram, a double rectangle represents which type of entity set?**
+* (A) Strong Entity Set
+* (B) Weak Entity Set
+* (C) Associative Entity Set
+* (D) Derived Entity Set
+
+
+12. **An attribute that can be broken down into smaller, independent sub-parts is known as a:**
+* (A) Multivalued attribute
+* (B) Derived attribute
+* (C) Composite attribute
+* (D) Complex attribute
+
+
+13. **How is a derived attribute represented in a standard Chen-style ER diagram?**
+* (A) Double oval
+* (B) Dashed oval
+* (C) Ellipse with an underline
+* (D) Diamond
+
+
+14. **The total number of entity sets participating in a relationship is called the relationship's:**
+* (A) Cardinality
+* (B) Degree
+* (C) Participation
+* (D) Role
+
+
+15. **If every entity in set A must participate in at least one relationship instance in relationship R, then the participation of A in R is:**
+* (A) Partial
+* (B) Total
+* (C) Optional
+* (D) Single
+
+
+16. **In an ER-to-Relational mapping, a weak entity set is reduced to a relation that includes:**
+* (A) Only its own attributes
+* (B) Its own attributes plus the primary key of its identifying strong entity set
+* (C) Only the primary key of the strong entity set
+* (D) A newly generated surrogate key only
+
+
+17. **Which data model organizes data in a tree-like structure where each child node has exactly one parent node?**
+* (A) Relational Model
+* (B) Network Model
+* (C) Hierarchical Model
+* (D) Object-Oriented Model
+
+
+18. **In an ER diagram, a relationship set itself can have attributes. These are called:**
+* (A) Structural attributes
+* (B) Descriptive attributes
+* (C) Identity attributes
+* (D) Multi-valued attributes
+
+
+19. **What represents a many-to-many relationship in a relational database model?**
+* (A) A foreign key in one of the existing tables
+* (B) A separate, standalone bridge/junction table
+* (C) Combining both entities into a single table
+* (D) A composite attribute in both tables
+
+
+20. **A relationship between the instances of a single entity type is called a:**
+* (A) Binary relationship
+* (B) Ternary relationship
+* (C) Recursive (or Unary) relationship
+* (D) Redundant relationship
+
+
+21. **Which of the following describes the Relational Model concept correctly?**
+* (A) Data is represented as a collection of trees.
+* (B) Data is represented as a collection of tables (relations).
+* (C) Data is stored as pointer-linked graphs.
+* (D) It doesn't support structural schemas.
+
+
+22. **The number of tuples in a relation is called its _______, while the number of attributes is called its _______.**
+* (A) Degree, Cardinality
+* (B) Cardinality, Degree
+* (C) Rows, Columns
+* (D) Schema, Instance
+
+
+23. **In the Relational Model, a row is technically called a:**
+* (A) Tuple
+* (B) Attribute
+* (C) Relation
+* (D) Domain
+
+
+24. **The allowed set of values for a specific attribute is called its:**
+* (A) Range
+* (B) Domain
+* (C) Tuple space
+* (D) Relation constraint
+
+
+25. **An entity set that does not possess sufficient attributes to form a primary key on its own is a:**
+* (A) Simple entity set
+* (B) Primary entity set
+* (C) Weak entity set
+* (D) Abstract entity set
+
+
+
+---
+
+### **Keys & Integrity Constraints (Questions 26–40)**
+
+26. **A minimal super key is formally defined as a:**
+* (A) Primary Key
+* (B) Candidate Key
+* (C) Foreign Key
+* (D) Unique Key
+
+
+27. **Which integrity constraint states that no primary key value can be NULL?**
+* (A) Referential Integrity
+* (B) Entity Integrity
+* (C) Domain Integrity
+* (D) Key Integrity
+
+
+28. **If a foreign key value in Table A references a primary key value in Table B, the rule that ensures the referenced value must exist is:**
+* (A) Entity Integrity
+* (B) Referential Integrity
+* (C) Check Constraint
+* (D) Assertion Constraint
+
+
+29. **Which of the following is true regarding a Super Key?**
+* (A) It must contain the minimum possible number of attributes.
+* (B) A primary key is a super key, but not all super keys are primary keys.
+* (C) It cannot contain redundant attributes.
+* (D) It can contain null values for its core attributes.
+
+
+30. **If a row in a parent table is deleted, and all corresponding rows in the child table are automatically deleted, which referential option is active?**
+* (A) ON DELETE SET NULL
+* (B) ON DELETE CASCADE
+* (C) ON DELETE RESTRICT
+* (D) ON DELETE NO ACTION
+
+
+31. **How many primary keys can a single relation have?**
+* (A) Zero or One
+* (B) Exactly One
+* (C) Any number
+* (D) Dependent on the number of candidate keys
+
+
+32. **A foreign key can accept NULL values unless:**
+* (A) It is part of a composite primary key or explicitly marked NOT NULL.
+* (B) It references a weak entity.
+* (C) It is defined in a junction table.
+* (D) The database is in 3NF.
+
+
+33. **An integrity constraint that restricts the values of an attribute to a specific range (e.g., Age > 18) is a:**
+* (A) Referential integrity constraint
+* (B) Domain integrity constraint
+* (C) Entity integrity constraint
+* (D) Key constraint
+
+
+34. **Candidate keys that are not selected as the primary key are called:**
+* (A) Secondary keys
+* (B) Alternate keys
+* (C) Super keys
+* (D) Foreign keys
+
+
+35. **The primary key of a relation is selected from the set of:**
+* (A) Super keys
+* (B) Foreign keys
+* (C) Candidate keys
+* (D) Derived keys
+
+
+36. **Which of the following can uniquely identify a tuple within a relation?**
+* (A) Super Key
+* (B) Candidate Key
+* (C) Primary Key
+* (D) All of the above
+
+
+37. **Foreign keys are used to establish a link between tables. The table containing the foreign key is called the:**
+* (A) Referenced table
+* (B) Referencing table
+* (C) Master table
+* (D) Parent table
+
+
+38. **The constraint that specifies that the value of an attribute must be unique across all rows but can be NULL is achieved using:**
+* (A) PRIMARY KEY constraint
+* (B) UNIQUE constraint
+* (C) FOREIGN KEY constraint
+* (D) DEFAULT constraint
+
+
+39. **Can a primary key be composed of multiple attributes?**
+* (A) No, a primary key must always be a single attribute.
+* (B) Yes, and it is termed a Composite Primary Key.
+* (C) Yes, and it is termed a Foreign Key.
+* (D) No, only candidate keys can be composite.
+
+
+40. **State whether True or False: A foreign key must always reference a primary key; it cannot reference a unique candidate key.**
+* (A) True
+* (B) False
+
+
+
+---
+
+### **Relational Algebra & Calculus (Questions 41–55)**
+
+41. **Which Relational Algebra operation is a unary operation used to select a subset of tuples based on a condition?**
+* (A) Project ($\pi$)
+* (B) Select ($\sigma$)
+* (C) Join ($\bowtie$)
+* (D) Union ($\cup$)
+
+
+42. **The Project ($\pi$) operation in Relational Algebra serves to:**
+* (A) Filter rows based on conditions.
+* (B) Extract specific columns and eliminate duplicate rows.
+* (C) Combine rows from two tables.
+* (D) Cross-multiply two sets.
+
+
+43. **If Relation R has $m$ tuples and Relation S has $n$ tuples, the Cartesian Product ($R \times S$) will yield how many tuples?**
+* (A) $m + n$
+* (B) $m - n$
+* (C) $m \times n$
+* (D) $m^n$
+
+
+44. **Which operation requires that the participating relations must be union-compatible (same number of attributes with matching domains)?**
+* (A) Cartesian Product
+* (B) Natural Join
+* (C) Intersect
+* (D) Project
+
+
+45. **The Natural Join ($\bowtie$) of two relations is equivalent to:**
+* (A) A Cartesian Product followed by a Selection and a Projection.
+* (B) A simple Union of two relations.
+* (C) A Selection followed by a Projection.
+* (D) A Division operation.
+
+
+46. **Which join type retains all tuples from the left relation even if there are no matching tuples in the right relation?**
+* (A) Right Outer Join
+* (B) Full Outer Join
+* (C) Left Outer Join
+* (D) Inner Join
+
+
+47. **The Relational Algebra is a ________ query language, whereas Relational Calculus is a ________ query language.**
+* (A) Declarative, Procedural
+* (B) Procedural, Declarative (Non-procedural)
+* (C) Functional, Object-oriented
+* (D) Imperative, Structural
+
+
+48. **An expression in Tuple Relational Calculus (TRC) is denoted as:**
+* (A) $\{t \mid P(t)\}$
+* (B) $\{x, y \mid P(x, y)\}$
+* (C) $\sigma_{P}(R)$
+* (D) $\pi_{A}(R)$
+
+
+49. **Domain Relational Calculus (DRC) differs from Tuple Relational Calculus because variables in DRC represent:**
+* (A) Entire rows
+* (B) Individual attribute values (domains)
+* (C) Base relations
+* (D) Database schemas
+
+
+50. **Which of the following operators is NOT a fundamental (basic) operator in Relational Algebra?**
+* (A) Selection ($\sigma$)
+* (B) Projection ($\pi$)
+* (C) Cartesian Product ($\times$)
+* (D) Natural Join ($\bowtie$)
+
+
+51. **The Division operation ($R \div S$) in Relational Algebra is most useful for queries containing which English phrase?**
+* (A) "At least one"
+* (B) "All" / "Every"
+* (C) "None of the"
+* (D) "Exactly equal to"
+
+
+52. **What occurs when an Inner Join is performed on two tables with no common attribute names?**
+* (A) It automatically throws a runtime syntax error.
+* (B) It behaves exactly like a Cartesian Product if no condition is provided.
+* (C) It results in an empty table.
+* (D) It strips away the columns of the second table.
+
+
+53. **In Relational Calculus, the quantifiers $\exists$ and $\forall$ represent:**
+* (A) "There exists" and "For all"
+* (B) "Equal to" and "Not equal to"
+* (C) "Element of" and "Subset of"
+* (D) "Summation" and "Product"
+
+
+54. **If relation R has attributes (A, B) and relation S has attributes (B, C), the schema of $R \bowtie S$ will be:**
+* (A) (A, B, B, C)
+* (B) (A, B, C)
+* (C) (A, C)
+* (D) (B)
+
+
+55. **The set difference operation ($R - S$) returns tuples that are:**
+* (A) In both R and S
+* (B) In R but not in S
+* (C) In S but not in R
+* (D) In either R or S but not both
+
+
+
+---
+
+### **Normalization & Functional Dependencies (Questions 56–70)**
+
+56. **A functional dependency $X \rightarrow Y$ is called a full functional dependency if:**
+* (A) Y is a proper subset of X.
+* (B) Removal of any attribute from X causes the dependency to no longer hold.
+* (C) Y is a primary key.
+* (D) X is a single attribute.
+
+
+57. **A relation is in First Normal Form (1NF) if and only if:**
+* (A) It has no composite keys.
+* (B) Every attribute domain contains only atomic (indivisible) values.
+* (C) There are no transitive dependencies.
+* (D) It contains a foreign key.
+
+
+58. **Second Normal Form (2NF) eliminates which type of anomaly/dependency?**
+* (A) Transitive Dependency
+* (B) Partial Dependency
+* (C) Multivalued Dependency
+* (D) Join Dependency
+
+
+59. **A relation is in Third Normal Form (3NF) if it is in 2NF and:**
+* (A) No non-prime attribute is transitively dependent on a candidate key.
+* (B) Every determinant is a super key.
+* (C) It has no composite attributes.
+* (D) There are no overlapping candidate keys.
+
+
+60. **Boyce-Codd Normal Form (BCNF) is a stricter form of:**
+* (A) 1NF
+* (B) 2NF
+* (C) 3NF
+* (D) 4NF
+
+
+61. **For a dependency $X \rightarrow Y$ to hold in BCNF, the determinant $X$ must strictly be a:**
+* (A) Prime Attribute
+* (B) Candidate Key
+* (C) Super Key
+* (D) Foreign Key
+
+
+62. **If an attribute is part of any candidate key of a relation, it is called a:**
+* (A) Non-prime attribute
+* (B) Prime attribute
+* (C) Foreign attribute
+* (D) Derived attribute
+
+
+63. **Armstrong's Axioms include which three core rules for functional dependencies?**
+* (A) Reflexivity, Augmentation, Transitivity
+* (B) Union, Decomposition, Pseudo-transitivity
+* (C) Selection, Projection, Join
+* (D) Atomicity, Consistency, Isolation
+
+
+64. **Given the functional dependency $X \rightarrow Y$ and $Y \rightarrow Z$, we can conclude $X \rightarrow Z$ using which rule?**
+* (A) Reflexivity
+* (B) Augmentation
+* (C) Transitivity
+* (D) Decomposition
+
+
+65. **Lossless-join decomposition ensures that:**
+* (A) No attributes are lost during decomposition.
+* (B) Rejoining the decomposed tables reproduces exactly the original relation without extra spurious tuples.
+* (C) Database storage space is cut in half.
+* (D) No functional dependencies are lost.
+
+
+66. **A dependency where a non-prime attribute determines another non-prime attribute is a:**
+* (A) Partial dependency
+* (B) Transitive dependency
+* (C) Trivial dependency
+* (D) Multivalued dependency
+
+
+67. **If a relation has only atomic attributes and its single candidate key consists of exactly one attribute, it is automatically in which normal form?**
+* (A) 1NF only
+* (B) 2NF
+* (C) BCNF
+* (D) 4NF
+
+
+68. **Every relation in BCNF is also in:**
+* (A) 3NF
+* (B) 4NF
+* (C) 5NF
+* (D) None of the above
+
+
+69. **Decomposition into 3NF is always guaranteed to be:**
+* (A) Lossless but not dependency-preserving
+* (B) Dependency-preserving but not lossless
+* (C) Both lossless and dependency-preserving
+* (D) Neither lossless nor dependency-preserving
+
+
+70. **Decomposition into BCNF is always lossless, but it cannot always guarantee:**
+* (A) Atomic values
+* (B) Elimination of redundancy
+* (C) Dependency preservation
+* (D) Reduction of tables
+
+
+
+---
+
+### **SQL Commands, Joins, Subqueries & Clauses (Questions 71–85)**
+
+71. **Which category of SQL commands includes `CREATE`, `ALTER`, `DROP`, and `TRUNCATE`?**
+* (A) DML
+* (B) DDL
+* (C) DQL
+* (D) DCL
+
+
+72. **The SQL command `MERGE` belongs to which category?**
+* (A) DDL
+* (B) DML
+* (C) TCL
+* (D) DCL
+
+
+73. **Which SQL commands are used to manage transaction boundaries?**
+* (A) GRANT, REVOKE
+* (B) COMMIT, ROLLBACK, SAVEPOINT
+* (C) INSERT, UPDATE, DELETE
+* (D) SELECT, WHERE
+
+
+74. **What is the difference between `DELETE` and `TRUNCATE`?**
+* (A) DELETE is DDL; TRUNCATE is DML.
+* (B) DELETE can be rolled back and can use a WHERE clause; TRUNCATE is a DDL operation that removes all rows and cannot be filtered with WHERE.
+* (C) TRUNCATE logs every row deletion individually.
+* (D) Both are identical in performance.
+
+
+75. **To filter groups generated by the `GROUP BY` clause, which clause must be used?**
+* (A) WHERE
+* (B) HAVING
+* (C) ORDER BY
+* (D) LIKE
+
+
+76. **Which wildcard characters are used with the SQL `LIKE` operator for pattern matching?**
+* (A) `*` and `?`
+* (B) `%` and `_`
+* (C) `$` and `#`
+* (D) `^` and `&`
+
+
+77. **What does a SQL subquery that returns a single value (one row, one column) called?**
+* (A) Correlated subquery
+* (B) Scalar subquery
+* (C) Multi-row subquery
+* (D) Inline view
+
+
+78. **In a correlated subquery:**
+* (A) The inner query executes only once before the outer query.
+* (B) The inner query depends on the current row being processed by the outer query.
+* (C) The outer query cannot contain a WHERE clause.
+* (D) It cannot use aggregate functions.
+
+
+79. **To eliminate duplicate rows from the output of a SQL `SELECT` statement, which keyword is used?**
+* (A) UNIQUE
+* (B) DISTINCT
+* (C) SINGLE
+* (D) UNION
+
+
+80. **Which SQL join returns all rows from both tables, matching rows where possible, and placing NULLs where matches don't exist?**
+* (A) Left Join
+* (B) Right Join
+* (C) Full Outer Join
+* (D) Cross Join
+
+
+81. **The default sorting order of the `ORDER BY` clause in SQL is:**
+* (A) Ascending (ASC)
+* (B) Descending (DESC)
+* (C) Random
+* (D) Index-based order
+
+
+82. **Which aggregate function ignores NULL values except when counting rows?**
+* (A) SUM
+* (B) AVG
+* (C) COUNT(*)
+* (D) MAX
+
+
+83. **Can the `WHERE` clause contain an aggregate function (e.g., `WHERE SUM(salary) > 5000`)?**
+* (A) Yes, always.
+* (B) No, aggregate functions are not allowed in the WHERE clause; use HAVING instead.
+* (C) Yes, if it is part of a join condition.
+* (D) Yes, if the table has an index.
+
+
+84. **The `GRANT` and `REVOKE` statements belong to which SQL subset?**
+* (A) TCL
+* (B) DML
+* (C) DCL
+* (D) DQL
+
+
+85. **What is the function of the `COALESCE()` function in SQL?**
+* (A) Combines two strings together.
+* (B) Returns the first non-NULL expression in a specified list.
+* (C) Computes the average of a column.
+* (D) Counts distinct rows.
+
+
+
+---
+
+### **Transaction, ACID, Concurrency & Data Warehousing (Questions 86–100)**
+
+86. **The 'A' in ACID properties of a transaction stands for:**
+* (A) Availability
+* (B) Atomicity
+* (C) Authentication
+* (D) Authority
+
+
+87. **Which ACID property ensures that the execution of transactions in parallel yields the same state as if they were executed sequentially?**
+* (A) Atomicity
+* (B) Consistency
+* (C) Isolation
+* (D) Durability
+
+
+88. **The Durability property of a transaction guarantees that:**
+* (A) Changes are committed to a temporary cache.
+* (B) Once a transaction commits, its updates survive even in the event of a subsequent system crash.
+* (C) A transaction cannot be interrupted.
+* (D) Data values fall within business limits.
+
+
+89. **A situation where Transaction T1 updates a row, T2 reads that updated row before T1 commits, and then T1 rolls back is called a:**
+* (A) Non-repeatable read
+* (B) Phantom read
+* (C) Dirty read
+* (D) Lost update
+
+
+90. **Which concurrency control protocol guarantees conflict serializability by enforcing growing and shrinking phases?**
+* (A) Time-stamp Ordering Protocol
+* (B) Two-Phase Locking (2PL) Protocol
+* (C) Validation-based Protocol
+* (D) Strict Tree Protocol
+
+
+91. **In Two-Phase Locking (2PL), a transaction cannot acquire any new locks once it:**
+* (A) Enters the growing phase.
+* (B) Releases its first lock (enters the shrinking phase).
+* (C) Commits to the disk.
+* (D) Aborts due to a deadlock.
+
+
+92. **A state where two or more transactions are indefinitely waiting for each other to release locks is called:**
+* (A) Starvation
+* (B) Deadlock
+* (C) Livelock
+* (D) Cascade Abort
+
+
+93. **Which log-based recovery technique updates the database on disk only after the transaction reaches its commit point?**
+* (A) Immediate Update technique
+* (B) Deferred Update technique
+* (C) Shadow Paging technique
+* (D) Checkpoint technique
+
+
+94. **The process of periodically writing all dirty log buffers and database blocks from memory to disk to speed up crash recovery is called:**
+* (A) Locking
+* (B) Commit
+* (C) Checkpointing
+* (D) Rollback
+
+
+95. **A Data Warehouse is characterized as:**
+* (A) Subject-oriented, Integrated, Time-variant, Non-volatile
+* (B) Transaction-oriented, Volatile, Disorganized, Current
+* (C) Application-specific, Operational, Temporary, Volatile
+* (D) Procedural, Localized, Scaled, Volatile
+
+
+96. **The process of extracting hidden, predictive, and actionable information from massive databases is known as:**
+* (A) Data Warehousing
+* (B) Data Mining
+* (C) Data Replication
+* (D) Data Encapsulation
+
+
+97. **In a data warehouse schema, a central table containing numerical metrics/measures surrounded by descriptive lookup tables is called a:**
+* (A) Snowflake Schema
+* (B) Star Schema
+* (C) Fact Constellation
+* (D) Relational View
+
+
+98. **The core difference between OLAP and OLTP systems is that:**
+* (A) OLAP is for transactional processing; OLTP is for analytical reporting.
+* (B) OLAP is optimized for complex data analysis queries; OLTP is optimized for fast, real-time CRUD operations.
+* (C) OLTP uses data warehouses instead of databases.
+* (D) OLAP does not support historical data.
+
+
+99. **An OLAP operation that moves from a finer-grained (detailed) view of data to a coarser-grained (summarized) view is called:**
+* (A) Drill-down
+* (B) Roll-up
+* (C) Slice
+* (D) Dice
+
+
+100. **The process of cleaning, transforming, and loading operational database data into a Data Warehouse is abbreviated as:**
+* (A) ELM
+* (B) ETL
+* (C) DDL
+* (D) OLAP
+
+
+
+---
+
+### **Answer Key**
+
+| Q. | Ans | | Q. | Ans | | Q. | Ans | | Q. | Ans | | Q. | Ans |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **1** | B | | **21** | B | | **41** | B | | **61** | C | | **81** | A |
+| **2** | B | | **22** | B | | **42** | B | | **62** | B | | **82** | C |
+| **3** | C | | **23** | A | | **43** | C | | **63** | A | | **83** | B |
+| **4** | B | | **24** | B | | **44** | C | | **64** | C | | **84** | C |
+| **5** | B | | **25** | C | | **45** | A | | **65** | B | | **85** | B |
+| **6** | B | | **26** | B | | **46** | C | | **66** | B | | **86** | B |
+| **7** | C | | **27** | B | | **47** | B | | **67** | B | | **87** | C |
+| **8** | B | | **28** | B | | **48** | A | | **68** | A | | **88** | B |
+| **9** | B | | **29** | B | | **49** | B | | **69** | C | | **89** | C |
+| **10**| B | | **30** | B | | **50** | D | | **70** | C | | **90** | B |
+| **11**| B | | **31** | B | | **51** | B | | **71** | B | | **91** | B |
+| **12**| C | | **32** | A | | **52** | B | | **72** | B | | **92** | B |
+| **13**| B | | **33** | B | | **53** | A | | **73** | B | | **93** | B |
+| **14**| B | | **34** | B | | **54** | B | | **74** | B | | **94** | C |
+| **15**| B | | **35** | C | | **55** | B | | **75** | B | | **95** | A |
+| **16**| B | | **36** | D | | **56** | B | | **76** | B | | **96** | B |
+| **17**| C | | **37** | B | | **57** | B | | **77** | B | | **97** | B |
+| **18**| B | | **38** | B | | **58** | B | | **78** | B | | **98** | B |
+| **19**| B | | **39** | B | | **59** | A | | **79** | B | | **99** | B |
+| **20**| C | | **40** | B | | **60** | C | | **80** | C | | **100**| B |
